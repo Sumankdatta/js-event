@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add a Comment</title>
+</head>
+
+<body>
+    <h1>There is a comment</h1>
+    <div id="comment">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique laboriosam fugit est dignissimos
+            voluptatibus ipsa rem temporibus unde nemo, laudantium voluptatum repudiandae maiores ipsam obcaecati minima
+            alias. Esse iure id aperiam incidunt modi quam quasi totam voluptatibus voluptas. Nihil rem eligendi ullam
+            nulla nobis laudantium recusandae, illum voluptatem dolor consequatur?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima optio aperiam in debitis ipsam incidunt
+            cupiditate sapiente? Saepe possimus facere laboriosam dignissimos, recusandae fugit excepturi doloremque
+            dolorum qui eveniet repellendus, sint beatae libero. Quia maiores architecto, odit sequi aliquid illo
+            dolorum beatae nam aliquam, sit temporibus nihil cum et pariatur?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta porro id magnam provident voluptatibus illum
+            obcaecati! Laudantium, dolore. Deleniti necessitatibus odit ipsum? Nisi illo officiis iure voluptatum
+            molestias eaque deleniti sapiente, quibusdam temporibus fugit quisquam natus odio? Velit, eveniet
+            perferendis ab nobis qui accusamus ea, laboriosam pariatur libero, dolorem cumque.</p>
+    </div>
+
+    <textarea name="" id="text-area" cols="60" rows="5"></textarea><br>
+    <button id="post">Post</button>
+
+    <script>
+        document.getElementById('post').addEventListener('click', function () {
+            const textArea = document.getElementById('text-area')
+            const inputText = textArea.value;
+
+            const commentContainer = document.getElementById('comment')
+            const p = document.createElement('p')
+            p.innerText = inputText
+
+            commentContainer.appendChild(p);
+
+            textArea.value = ''
+
+        })
+
+    </script>
+</body>
+
+</html>
